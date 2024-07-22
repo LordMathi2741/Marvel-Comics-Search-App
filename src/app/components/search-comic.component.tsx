@@ -24,17 +24,17 @@ export default function SearchComic(){
              <InputText value={issueTitle} onChange={(e) => setIssueTitle(e.target.value)} type="text" className="w-48 md:w-64 p-2 text-xs md:text-base shadow-xl "  placeholder="Please enter the  Issue title" />
              <Button onClick={searchComic} label="Search"  className="p-3 w-28 text-xs md:text-base rounded-lg  bg-red-700 text-white shadow-xl hover:scale-110  " />
          </div>
-         <Card  title="Comic Info" className={`${comic.issueTitle != " "  ? 'block' : 'hidden'} w-60 md:w-80 bg-red-700 text-white`}>
-            <p> IssueTitle: {comic.issueTitle}</p>
-            <p> Name: {comic.comicName}</p>
-            <p> Writer: {comic.writer}</p>
-            <p>Penciler: {comic.penciler}</p>
-            <p> Artist: {comic.coverArtist}</p>
-            <p> Format: {comic.format}</p>
-            <p> Price: {comic.price}</p>
-            <p> PusblishDate: {comic.publishDate}</p>
-            <p> Rating: {comic.rating}</p>
-            <p>ActiveYears: {comic.activeYears}</p>
+         <Card  title="Comic Info" className={`${comic?.issueTitle != " "  ? 'block' : 'hidden'} w-60 md:w-80 bg-red-700 text-white`}>
+            <p> IssueTitle: {comic?.issueTitle}</p>
+            <p> Name: {comic?.comicName}</p>
+            <p> Writer: {comic?.writer}</p>
+            <p>Penciler: {comic?.penciler}</p>
+            <p> Artist: {comic?.coverArtist}</p>
+            <p> Format: {comic?.format}</p>
+            <p> Price: {comic?.price}</p>
+            <p> PusblishDate: {comic?.publishDate}</p>
+            <p> Rating: {comic?.rating}</p>
+            <p>ActiveYears: {comic?.activeYears}</p>
          </Card>
      </div>
     );
