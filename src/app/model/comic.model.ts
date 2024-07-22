@@ -12,7 +12,7 @@ export class Comic {
     rating: string;
     writer: string;
 
-    public constructor(){
+    private constructor(){
         this.activeYears = " ";
         this.comicName = " ";
         this.coverArtist = " ";
@@ -26,6 +26,9 @@ export class Comic {
         this.rating = " ";
         this.writer = " ";
     }
+
+    public static readonly _instance = new Comic();
+
 
 
 }

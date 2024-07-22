@@ -13,7 +13,7 @@ import {Comic} from "@/app/model/comic.model";
 
 export default function SearchComic(){
     const [issueTitle, setIssueTitle] = useState("");
-    const [comic, setComic] = useState(new Comic());
+    const [comic, setComic] = useState(Comic._instance);
     const searchComic = async () => {
         const response : AxiosResponse = await ComicService.getComicByIssueTitle(issueTitle);
         setComic(response.data);
