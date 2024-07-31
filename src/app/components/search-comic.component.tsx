@@ -15,9 +15,9 @@ export default function SearchComic(){
     const [issueTitle, setIssueTitle] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [comic, setComic] = useState(Comic._instance);
-    const searchComic = async () => {
+    const searchComic  = async () =>{
         setIsLoading(true);
-        ComicService.getComicByIssueTitle(issueTitle).then((response: AxiosResponse) => {
+        await ComicService.getComicByIssueTitle(issueTitle).then((response: AxiosResponse) => {
             setComic(response.data);
             setIsLoading(false);
         });
